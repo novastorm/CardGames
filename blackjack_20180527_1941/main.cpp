@@ -7,9 +7,21 @@
 //
 
 #include <iostream>
+#include "Card.hpp"
+#include "FrenchCard.hpp"
+
+using namespace std;
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    FrenchCard::Card aCard = FrenchCard(
+        FrenchCardFace(FrenchCardFaceEnum::ace),
+        FrenchCardSuit(FrenchCardSuitEnum::spade)
+        );
+
+//    std::cout << "Hello, World!\n";
+    
+    cout << "F[" << aCard.getFace().getRawValue() << "]"
+        << " S[" << aCard.getFace().getDescription() << "]" << endl;
+    
     return 0;
 }
