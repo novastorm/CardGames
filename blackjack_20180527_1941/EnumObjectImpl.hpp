@@ -34,7 +34,7 @@ public:
     
     string getDescription() const { return descriptions[_rawValue]; }
     
-    T operator= (const T& object) {
+    T* operator= (const T& object) {
         return new T(object);
     }
 };

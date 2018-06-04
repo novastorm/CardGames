@@ -7,21 +7,28 @@
 //
 
 #include <iostream>
+#include "Card.hpp"
 #include "CardImpl.hpp"
 #include "FrenchCard.hpp"
 
 using namespace std;
 
+void printCard(Card* aCard) {
+    cout << "F[" << aCard->getFace()->getDescription() << "]"
+    << " of S[" << aCard->getSuit()->getDescription() << "]" << endl;
+}
+
 int main(int argc, const char * argv[]) {
-    FrenchCard aCard = FrenchCard(
+    Card* aCard = new FrenchCard(
         FrenchCardFace(FrenchCardFaceEnum::ace),
-        FrenchCardSuit(FrenchCardSuitEnum::spade)
+        FrenchCardSuit(FrenchCardSuitEnum::spades)
         );
 
-//    std::cout << "Hello, World!\n";
-    
-    cout << "F[" << aCard.getFace()->getDescription() << "]"
-    << " of S[" << aCard.getSuit()->getDescription() << "]" << endl;
+    printCard(aCard);
+    printCard(new FrenchCard(
+        FrenchCardFace(FrenchCardFaceEnum::queen),
+        FrenchCardSuit(FrenchCardSuitEnum::hearts)
+        ));
     
     return 0;
 }

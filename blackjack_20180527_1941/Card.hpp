@@ -15,8 +15,8 @@
 
 class Card {
 public:
-    EnumObject getFace();
-    EnumObject getSuit();
+    virtual EnumObject* getFace() =0;
+    virtual EnumObject* getSuit() =0;
 };
 
 #endif /* Card_hpp */

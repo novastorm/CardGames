@@ -27,8 +27,8 @@ public:
     EnumObject* getFace() { return new F(*_face); }
     EnumObject* getSuit() { return new S(*_suit); }
     
-    CardImpl<F,S>  operator= (const CardImpl<F,S>& object) {
-        return CardImpl(object._face, object._suit);
+    CardImpl<F,S>*  operator= (const CardImpl<F,S>& object) {
+        return new CardImpl(object._face, object._suit);
     };
 };
 

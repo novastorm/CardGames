@@ -61,7 +61,7 @@ public:
 };
 
 enum FrenchCardSuitEnum: int {
-    spade, heart, club, diamond
+    spades, hearts, clubs, diamonds
 };
 
 class FrenchCardSuit: public EnumObjectImpl<FrenchCardSuitEnum> {
@@ -83,7 +83,6 @@ class FrenchCard: public CardImpl<FrenchCardFace, FrenchCardSuit> {
 public:
 
     FrenchCard(FrenchCardFace face, FrenchCardSuit suit) noexcept: CardImpl(face, suit) {}
-
 };
 
 #endif /* FrenchCard_hpp */
