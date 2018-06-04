@@ -14,15 +14,18 @@
 #include "Card.hpp"
 
 template<typename F, typename S>
-class CardImpl: public Card<F,S> {
+class CardImpl: public Card {
 public:
-    F _face;
-    S _suit;
+    F* _face;
+    S* _suit;
     
-    CardImpl<F,S> (F face, S suit): _face(face), _suit(suit) {}
+    CardImpl<F,S> (F face, S suit) {
+        _face = new F(face);
+        _suit = new S(suit);
+    }
     
-    F getFace() { return _face; }
-    S getSuit() { return _suit; }
+    EnumObject* getFace() { return new F(*_face); }
+    EnumObject* getSuit() { return new S(*_suit); }
     
     CardImpl<F,S>  operator= (const CardImpl<F,S>& object) {
         return CardImpl(object._face, object._suit);

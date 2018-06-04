@@ -11,11 +11,12 @@
 
 #include <cstdio>
 
-template<typename F, typename S>
+#include "EnumObject.hpp"
+
 class Card {
 public:
-    F getFace();
-    S getSuit();
+    EnumObject getFace();
+    EnumObject getSuit();
 };
 
 #endif /* Card_hpp */

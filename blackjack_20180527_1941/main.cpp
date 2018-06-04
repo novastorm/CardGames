@@ -20,8 +20,8 @@ int main(int argc, const char * argv[]) {
 
 //    std::cout << "Hello, World!\n";
     
-    cout << "F[" << aCard.getFace().getDescription() << "]"
-        << " of S[" << aCard.getSuit().getDescription() << "]" << endl;
+    cout << "F[" << aCard.getFace()->getDescription() << "]"
+    << " of S[" << aCard.getSuit()->getDescription() << "]" << endl;
     
     return 0;
 }
