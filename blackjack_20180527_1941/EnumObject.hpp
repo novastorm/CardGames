@@ -16,11 +16,8 @@ using namespace std;
 class EnumObject {
 
 public:
-    
     int getRawValue() const;
-
     string getDescription() const;
-
 };
 
 #endif /* EnumObject_hpp */

@@ -13,14 +13,12 @@
 #include <cstdio>
 #include <string>
 
-#include "Assignable.hpp"
-#include "Card.hpp"
-#include "EnumObject.hpp"
+#include "CardImpl.hpp"
 #include "EnumObjectImpl.hpp"
 
 using namespace std;
 
-enum FrenchCardFaceEnum {
+enum FrenchCardFaceEnum: int {
     joker=0,
     one=1, ace=1,
     two=2, duece=2,
@@ -60,18 +58,9 @@ public:
     
     FrenchCardFace(int rawValue): EnumObjectImpl(rawValue) {}
     FrenchCardFace(FrenchCardFaceEnum value): EnumObjectImpl(value) {}
-    
-    int getRawValue() const {
-        return EnumObjectImpl::getRawValue();
-    }
-    
-    string getDescription() const {
-        return EnumObjectImpl::getDescription();
-    }
-    
 };
 
-enum FrenchCardSuitEnum {
+enum FrenchCardSuitEnum: int {
     spade, heart, club, diamond
 };
 
@@ -86,18 +75,14 @@ public:
     
     FrenchCardSuit(int rawValue): EnumObjectImpl(rawValue) {}
     FrenchCardSuit(FrenchCardSuitEnum value): EnumObjectImpl(value) {}
-    
-//    FrenchCardSuit operator= (const FrenchCardSuit& object) {
-//        return FrenchCardSuit(object.getRawValue());
-//    }
 };
 
 
-class FrenchCard: public Card<FrenchCardFace, FrenchCardSuit> {
+class FrenchCard: public CardImpl<FrenchCardFace, FrenchCardSuit> {
     
 public:
 
-    FrenchCard(FrenchCardFace face, FrenchCardSuit suit) noexcept: Card(face, suit) {}
+    FrenchCard(FrenchCardFace face, FrenchCardSuit suit) noexcept: CardImpl(face, suit) {}
 
 };
 
