@@ -31,7 +31,6 @@
 		3E4B781A20BBB6F8003106D5 /* FrenchCard.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FrenchCard.hpp; sourceTree = "<group>"; };
 		3E4B781C20BC09B1003106D5 /* EnumObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = EnumObject.hpp; sourceTree = "<group>"; };
 		3E4B782020BC9BAA003106D5 /* EnumObjectImpl.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EnumObjectImpl.hpp; sourceTree = "<group>"; };
-		3E4B782120BCAF40003106D5 /* Assignable.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Assignable.hpp; sourceTree = "<group>"; };
 		3EBA67DE20C4B8CB00B3BDE3 /* Card.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Card.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,7 +67,6 @@
 				3E4B780F20BBA42E003106D5 /* main.cpp */,
 				3E4B781720BBB000003106D5 /* CardImpl.hpp */,
 				3EBA67DE20C4B8CB00B3BDE3 /* Card.hpp */,
-				3E4B782120BCAF40003106D5 /* Assignable.hpp */,
 				3E4B781920BBB6F8003106D5 /* FrenchCard.cpp */,
 				3E4B781A20BBB6F8003106D5 /* FrenchCard.hpp */,
 				3E4B782020BC9BAA003106D5 /* EnumObjectImpl.hpp */,

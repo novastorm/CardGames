@@ -36,8 +36,8 @@ enum FrenchCardFaceEnum: int {
 };
 
 class FrenchCardFace: public EnumObjectImpl<FrenchCardFaceEnum> {
-public:
-    const string faceDescriptions[14] = {
+protected:
+    const string _descriptions[14] = {
         "joker",
         "ace",
         "two",
@@ -56,6 +56,7 @@ public:
         "king"
     };
     
+public:
     FrenchCardFace(int rawValue): EnumObjectImpl(rawValue) {}
     FrenchCardFace(FrenchCardFaceEnum value): EnumObjectImpl(value) {}
 };
@@ -65,14 +66,15 @@ enum FrenchCardSuitEnum: int {
 };
 
 class FrenchCardSuit: public EnumObjectImpl<FrenchCardSuitEnum> {
-public:
-    const string descriptions[4] = {
+protected:
+    const string _descriptions[4] = {
         "spades",
         "hearts",
         "clubs",
         "diamonds"
     };
     
+public:
     FrenchCardSuit(int rawValue): EnumObjectImpl(rawValue) {}
     FrenchCardSuit(FrenchCardSuitEnum value): EnumObjectImpl(value) {}
 };
@@ -81,7 +83,6 @@ public:
 class FrenchCard: public CardImpl<FrenchCardFace, FrenchCardSuit> {
     
 public:
-
     FrenchCard(FrenchCardFace face, FrenchCardSuit suit) noexcept: CardImpl(face, suit) {}
 };
 

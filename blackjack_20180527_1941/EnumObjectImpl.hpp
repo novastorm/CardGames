@@ -18,25 +18,17 @@ using namespace std;
 
 template<typename T>
 class EnumObjectImpl: public EnumObject {
+protected:
+    const int _rawValue;
+    const string _descriptions[0];
+    
 public:
-    int _rawValue;
-    string descriptions[0];
-    
-    EnumObjectImpl<T> (int rawValue) {
-        _rawValue = rawValue;
-    }
-    
-    EnumObjectImpl<T> (T value) {
-        _rawValue = value;
-    }
+    EnumObjectImpl<T> (int rawValue): _rawValue(rawValue) {}
+    EnumObjectImpl<T> (T value): _rawValue(value) {}
     
     int getRawValue() const { return _rawValue; }
     
-    string getDescription() const { return descriptions[_rawValue]; }
-    
-    T* operator= (const T& object) {
-        return new T(object);
-    }
+    string getDescription() const { return _descriptions[_rawValue]; }
 };
 
 #endif /* EnumObjectImpl_hpp */

@@ -15,10 +15,11 @@
 
 template<typename F, typename S>
 class CardImpl: public Card {
-public:
-    F* _face;
-    S* _suit;
+protected:
+    const F* _face;
+    const S* _suit;
     
+public:
     CardImpl<F,S> (F face, S suit) {
         _face = new F(face);
         _suit = new S(suit);
@@ -26,10 +27,6 @@ public:
     
     EnumObject* getFace() { return new F(*_face); }
     EnumObject* getSuit() { return new S(*_suit); }
-    
-    CardImpl<F,S>*  operator= (const CardImpl<F,S>& object) {
-        return new CardImpl(object._face, object._suit);
-    };
 };
 
 #endif /* CardImpl_hpp */
