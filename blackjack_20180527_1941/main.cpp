@@ -18,45 +18,27 @@
 using namespace std;
 
 void printCard(Card* aCard) {
-    cout << "F[" << aCard->getFace()->getDescription() << "]"
-    << " of S[" << aCard->getSuit()->getDescription() << "]" << endl;
+    cout << "F[" << aCard->getFace()->getRawValue() << "][" << aCard->getFace()->getDescription() << "]"
+    << " of S[" << aCard->getSuit()->getRawValue() << "][" << aCard->getSuit()->getDescription() << "]" << endl;
 }
 
-//class Random {
-//private:
-//    static void seedRandomGenerator() {
-//        if (_seed != 0) { return; }
-//
-//        _seed = unsigned(chrono::system_clock::now().time_since_epoch().count());
-//        mt19937 generator(_seed);
-//    }
-//protected:
-//    static unsigned _seed;
-//public:
-//    static void config() {
-//        _seed = 0;
-//    }
-//    static int random(int upper, int lower = 0) {
-//        seedRandomGenerator();
-//        mt19937 generator;
-//        int r, min;
-//
-//        min = 0;
-//
-//        for(;;) {
-//            r = generator();
-//            if (r >= min) {
-//                break;
-//            }
-//        }
-//        cout << "r: " << r << endl;
-//        return (r % upper) + lower;
-//    }
-//};
+class Random {
+protected:
+    static random_device _seed;
+    static mt19937_64 _generator;
+
+public:
+
+    static int getRandom(int upper, int lower = 0) {
+        uniform_int_distribution<> randomizer(lower, upper);
+        return randomizer(_generator);
+    }
+};
+
+random_device Random::_seed;
+mt19937_64 Random::_generator;
 
 int main(int argc, const char * argv[]) {
-    
-//    Random::config();
     
     Card* aCard = new FrenchCard(
         FrenchCardFace(FrenchCardFaceEnum::ace),
@@ -76,12 +58,17 @@ int main(int argc, const char * argv[]) {
     Card* cCard(aCard);
     printCard(cCard);
     
-//    cout << "G: " << Random::random(4, 1) << endl;
-    
-    printCard(new FrenchCard(
-        FrenchCardFace(FrenchCardFaceEnum::queen),
-        FrenchCardSuit(FrenchCardSuitEnum::hearts)
-        ));
+    int face;
+    int suit;
+    for(int i=0; i < 3; ++i) {
+        face = Random::getRandom(13, 1);
+        suit = Random::getRandom(3, 0);
+        
+        printCard(new FrenchCard(
+            FrenchCardFace(face),
+            FrenchCardSuit(suit)
+            ));
+    }
 
     return 0;
 }
