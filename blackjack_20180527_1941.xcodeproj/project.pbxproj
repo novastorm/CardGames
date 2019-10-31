@@ -32,6 +32,8 @@
 		3E4B781C20BC09B1003106D5 /* EnumObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = EnumObject.hpp; sourceTree = "<group>"; };
 		3E4B782020BC9BAA003106D5 /* EnumObjectImpl.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EnumObjectImpl.hpp; sourceTree = "<group>"; };
 		3EBA67DE20C4B8CB00B3BDE3 /* Card.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Card.hpp; sourceTree = "<group>"; };
+		3EE79CC7236A6A68006F8E6A /* TarotMinorCard.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TarotMinorCard.hpp; sourceTree = "<group>"; };
+		3EF8DDC6236B896600517CBC /* TarotMajorCard.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TarotMajorCard.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,8 @@
 				3EBA67DE20C4B8CB00B3BDE3 /* Card.hpp */,
 				3E4B781920BBB6F8003106D5 /* FrenchCard.cpp */,
 				3E4B781A20BBB6F8003106D5 /* FrenchCard.hpp */,
+				3EE79CC7236A6A68006F8E6A /* TarotMinorCard.hpp */,
+				3EF8DDC6236B896600517CBC /* TarotMajorCard.hpp */,
 				3E4B782020BC9BAA003106D5 /* EnumObjectImpl.hpp */,
 				3E4B781C20BC09B1003106D5 /* EnumObject.hpp */,
 			);
@@ -101,7 +105,7 @@
 		3E4B780420BBA42E003106D5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = 4MFD;
 				TargetAttributes = {
 					3E4B780B20BBA42E003106D5 = {
@@ -115,6 +119,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 3E4B780320BBA42D003106D5;
 			productRefGroup = 3E4B780D20BBA42E003106D5 /* Products */;
@@ -251,6 +256,7 @@
 		3E4B781420BBA42E003106D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KY9W9NLJDU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -260,6 +266,7 @@
 		3E4B781520BBA42E003106D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KY9W9NLJDU;
 				PRODUCT_NAME = "$(TARGET_NAME)";

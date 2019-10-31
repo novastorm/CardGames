@@ -18,24 +18,26 @@
 
 using namespace std;
 
-enum FrenchCardFaceEnum: int {
-    joker=0,
-    one=1, ace=1,
-    two=2, duece=2,
-    three=3,
-    four=4,
-    five=5,
-    six=6,
-    seven=7,
-    eight=8,
-    nine=9,
-    ten=10,
-    jack=11,
-    queen=12,
-    king=13
-};
+namespace FrenchCardFaceEnum {
+    enum Enum: int {
+        joker=0,
+        one=1, ace=1,
+        two=2, duece=2,
+        three=3,
+        four=4,
+        five=5,
+        six=6,
+        seven=7,
+        eight=8,
+        nine=9,
+        ten=10,
+        jack=11,
+        queen=12,
+        king=13
+    };
+}
 
-class FrenchCardFace: public EnumObjectImpl<FrenchCardFaceEnum> {
+class FrenchCardFace: public EnumObjectImpl<FrenchCardFaceEnum::Enum> {
 protected:
     const string _descriptions[14] = {
         "joker",
@@ -58,14 +60,16 @@ protected:
     
 public:
     FrenchCardFace(int rawValue): EnumObjectImpl(rawValue) {}
-    FrenchCardFace(FrenchCardFaceEnum value): EnumObjectImpl(value) {}
+    FrenchCardFace(FrenchCardFaceEnum::Enum value): EnumObjectImpl(value) {}
 };
 
-enum FrenchCardSuitEnum: int {
-    spades, hearts, clubs, diamonds
-};
+namespace FrenchCardSuitEnum {
+    enum Enum: int {
+        spades, hearts, clubs, diamonds
+    };
+}
 
-class FrenchCardSuit: public EnumObjectImpl<FrenchCardSuitEnum> {
+class FrenchCardSuit: public EnumObjectImpl<FrenchCardSuitEnum::Enum> {
 protected:
     const string _descriptions[4] = {
         "spades",
@@ -76,7 +80,7 @@ protected:
     
 public:
     FrenchCardSuit(int rawValue): EnumObjectImpl(rawValue) {}
-    FrenchCardSuit(FrenchCardSuitEnum value): EnumObjectImpl(value) {}
+    FrenchCardSuit(FrenchCardSuitEnum::Enum value): EnumObjectImpl(value) {}
 };
 
 
