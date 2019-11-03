@@ -25,8 +25,13 @@ public:
         _suit = new S(suit);
     }
     
-    EnumObject* getFace() { return new F(*_face); }
-    EnumObject* getSuit() { return new S(*_suit); }
+    EnumObject* getFace() {
+        return new F(*_face);
+    }
+    
+    EnumObject* getSuit() {
+        return new S(*_suit);
+    }
 };
 
 #endif /* CardImpl_hpp */

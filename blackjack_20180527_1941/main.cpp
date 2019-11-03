@@ -21,8 +21,9 @@ void printCard(Card* aCard) {
         cout << "No Card" << endl;
         return;
     }
-    cout << "F[" << aCard->getFace()->getRawValue() << "][" << aCard->getFace()->getDescription() << "]"
-    << " of S[" << aCard->getSuit()->getRawValue() << "][" << aCard->getSuit()->getDescription() << "]" << endl;
+    cout << "F[" << aCard->getFace()->getRawValue() << "][" << aCard->getFace()->getDescription() << "]";
+    cout << " of S[" << aCard->getSuit()->getRawValue() << "][" << aCard->getSuit()->getDescription() << "]";
+    cout << endl;
 }
 
 class Random {
