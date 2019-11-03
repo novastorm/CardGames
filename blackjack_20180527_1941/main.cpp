@@ -12,9 +12,6 @@
 #include <random>
 
 #include "Card.hpp"
-//#include "FrenchCard.hpp"
-//#include "TarotMinorArcanaCard.hpp"
-//#include "TarotMajorArcanaCard.hpp"
 #include "TarotDeck.hpp"
 
 using namespace std;
