@@ -18,7 +18,9 @@
 
 using namespace std;
 
-enum TarotMajorCardFaceEnum: int {
+namespace TarotMajorArcanaCard {
+
+enum FaceEnum {
     the_magician,
     the_high_priestess,
     the_empress,
@@ -47,7 +49,7 @@ enum TarotMajorCardFaceEnum: int {
     the_fool
 };
 
-class TarotMajorCardFace: public EnumObjectImpl<TarotMajorCardFaceEnum> {
+class Face: public EnumObjectImpl<FaceEnum> {
 protected:
     const string _descriptions[22] = {
         "the_magician",
@@ -79,30 +81,32 @@ protected:
     };
     
 public:
-    TarotMajorCardFace(int rawValue): EnumObjectImpl(rawValue) {}
-    TarotMajorCardFace(TarotMajorCardFaceEnum value): EnumObjectImpl(value) {}
+    Face(int rawValue): EnumObjectImpl(rawValue) {}
+    Face(FaceEnum value): EnumObjectImpl(value) {}
 };
 
-enum TarotMajorCardSuitEnum: int {
+enum SuitEnum: int {
     none
 };
 
-class TarotMajorCardSuit: public EnumObjectImpl<TarotMajorCardSuitEnum> {
+class Suit: public EnumObjectImpl<SuitEnum> {
 protected:
     const string _descriptions[1] = {
         "none"
     };
     
 public:
-    TarotMajorCardSuit(int rawValue): EnumObjectImpl(rawValue) {}
-    TarotMajorCardSuit(TarotMajorCardSuitEnum value): EnumObjectImpl(value) {}
+    Suit(int rawValue): EnumObjectImpl(rawValue) {}
+    Suit(SuitEnum value): EnumObjectImpl(value) {}
 };
 
 
-class TarotMajorCard: public CardImpl<TarotMajorCardFace, TarotMajorCardSuit> {
+class Card: public CardImpl<Face, Suit> {
     
 public:
-    TarotMajorCard(TarotMajorCardFace face, TarotMajorCardSuit suit) noexcept: CardImpl(face, suit) {}
+    Card(Face face, Suit suit) noexcept: CardImpl(face, suit) {}
 };
+
+}
 
 #endif /* TarotMajorCard_hpp */

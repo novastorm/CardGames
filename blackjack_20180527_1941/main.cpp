@@ -12,9 +12,10 @@
 #include <random>
 
 #include "Card.hpp"
-#include "FrenchCard.hpp"
-#include "TarotMinorCard.hpp"
-#include "TarotMajorCard.hpp"
+//#include "FrenchCard.hpp"
+//#include "TarotMinorArcanaCard.hpp"
+//#include "TarotMajorArcanaCard.hpp"
+#include "TarotDeck.hpp"
 
 using namespace std;
 
@@ -55,85 +56,13 @@ mt19937_64 Random::_generator;
 bool Random::_isSeeded = false;
 
 int main(int argc, const char * argv[]) {
-    
-    Card* aCard = new FrenchCard(
-        FrenchCardFace(FrenchCardFaceEnum::ace),
-        FrenchCardSuit(FrenchCardSuitEnum::spades)
-        );
-
-    printCard(aCard);
-    
-    printCard(new FrenchCard(
-        FrenchCardFace(FrenchCardFaceEnum::queen),
-        FrenchCardSuit(FrenchCardSuitEnum::hearts)
-        ));
-    
-    Card* bCard = aCard;
-    printCard(bCard);
-    
-    Card* cCard(aCard);
-    printCard(cCard);
-    
-    int face;
-    int suit;
-    int i;
-    for(i=0; i < 3; ++i) {
-        face = Random::getRandom(13, 1);
-        suit = Random::getRandom(3, 0);
         
-        aCard = new FrenchCard(
-                    FrenchCardFace(face),
-                    FrenchCardSuit(suit)
-                    );
-        
-        printCard(aCard);
+    TarotDeck* tarotDeck = new TarotDeck();
+    
+    for (int i=0; i < tarotDeck->count; i++) {
+        printCard(tarotDeck->deck[i]);
     }
     
-    cout << "Tarot Deck" << endl;
-        
-    cout << "Tarot Deck Add Minor Arcana" << endl;
-
-    int numTarotMinorFaces = 14;
-    int numTarotMinorSuits = 4;
-    int numTarotMajorFaces = 22;
-    
-    Card* deck[numTarotMinorFaces * numTarotMinorSuits + numTarotMajorFaces];
-    
-    for (int s=0; s < numTarotMinorSuits; s++) {
-        for (int f=0; f < numTarotMinorFaces; f++) {
-            i = s * numTarotMinorFaces + f;
-            deck[i] = new TarotMinorCard(
-                TarotMinorCardFace(f+1),
-                TarotMinorCardSuit(s)
-                );
-        }
-    }
-    
-    int numCards;
-    numCards = numTarotMinorSuits * numTarotMinorFaces;
-    for (i=0; i < numCards; i++) {
-        printCard(deck[i]);
-    }
-
-    cout << "Tarot Deck Add Major Arcana" << endl;
-
-    Card* newCard;
-    for (int f=0; f < numTarotMajorFaces; f++) {
-        i = numCards + f;
-        newCard = new TarotMajorCard(
-            TarotMajorCardFace(f),
-            TarotMajorCardSuit(0)
-            );
-        printCard(newCard);
-        deck[i] = newCard;
-    }
-    
-    cout << "Tarot Deck with Major Arcana" << endl;
-
-    numCards = numTarotMinorSuits * numTarotMinorFaces + numTarotMajorFaces;
-    for (i=0; i < numCards; i++) {
-        printCard(deck[i]);
-    }
-
     return 0;
 }
+

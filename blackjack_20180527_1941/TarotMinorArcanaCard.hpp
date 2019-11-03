@@ -1,13 +1,13 @@
 //
-//  FrenchCard.hpp
+//  TarotMinorCard.hpp
 //  blackjack_20180527_1941
 //
 //  Created by Adland Lee on 5/27/18.
 //  Copyright © 2018 4MFD. All rights reserved.
 //
 
-#ifndef FrenchCard_hpp
-#define FrenchCard_hpp
+#ifndef TarotMinorCard_hpp
+#define TarotMinorCard_hpp
 
 #include <array>
 #include <cstdio>
@@ -18,12 +18,11 @@
 
 using namespace std;
 
-namespace FrenchCard {
+namespace TarotMinorArcanaCard {
 
-enum FaceEnum: int {
-    joker=0,
-    one=1, ace=1,
-    two=2, duece=2,
+enum FaceEnum {
+    ace=1, one=1,
+    two=2,
     three=3,
     four=4,
     five=5,
@@ -32,15 +31,16 @@ enum FaceEnum: int {
     eight=8,
     nine=9,
     ten=10,
-    jack=11,
-    queen=12,
-    king=13
+    page=11, jack=11,
+    knight=12,
+    queen=13,
+    king=14
 };
 
-class Face: public EnumObjectImpl<FaceEnum> {
+class Face: public EnumObjectImpl<TarotMinorArcanaCard::FaceEnum> {
 protected:
-    const string _descriptions[14] = {
-        "joker",
+    const string _descriptions[15] = {
+        "invalid",
         "ace",
         "two",
         "three",
@@ -53,32 +53,36 @@ protected:
         "nine",
         
         "ten",
-        "jack",
+        "page",
+        "knight",
         "queen",
         "king"
     };
     
 public:
     Face(int rawValue): EnumObjectImpl(rawValue) {}
-    Face(FaceEnum value): EnumObjectImpl(value) {}
+    Face(TarotMinorArcanaCard::FaceEnum value): EnumObjectImpl(value) {}
 };
 
 enum SuitEnum: int {
-    spades, hearts, clubs, diamonds
+    swords,
+    chalices,
+    pentacles,
+    wands
 };
 
-class Suit: public EnumObjectImpl<SuitEnum> {
+class Suit: public EnumObjectImpl<TarotMinorArcanaCard::SuitEnum> {
 protected:
     const string _descriptions[4] = {
-        "spades",
-        "hearts",
-        "clubs",
-        "diamonds"
+        "swords",
+        "chalices",
+        "pentacles",
+        "wands"
     };
     
 public:
     Suit(int rawValue): EnumObjectImpl(rawValue) {}
-    Suit(SuitEnum value): EnumObjectImpl(value) {}
+    Suit(TarotMinorArcanaCard::SuitEnum value): EnumObjectImpl(value) {}
 };
 
 
@@ -89,4 +93,4 @@ public:
 };
 
 }
-#endif /* FrenchCard_hpp */
+#endif /* TarotMinorCard_hpp */
