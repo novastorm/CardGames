@@ -74,20 +74,20 @@
 		3E4B780E20BBA42E003106D5 /* blackjack_20180527_1941 */ = {
 			isa = PBXGroup;
 			children = (
-				3E4B780F20BBA42E003106D5 /* main.cpp */,
-				3EF8DDC7236BA89000517CBC /* CardDeck.hpp */,
-				3E4B781720BBB000003106D5 /* CardImpl.hpp */,
 				3EBA67DE20C4B8CB00B3BDE3 /* Card.hpp */,
-				3E4B781920BBB6F8003106D5 /* FrenchCard.cpp */,
-				3E4B781A20BBB6F8003106D5 /* FrenchCard.hpp */,
-				3EE79CC7236A6A68006F8E6A /* TarotMinorArcanaCard.hpp */,
-				3EF8DDC6236B896600517CBC /* TarotMajorArcanaCard.hpp */,
-				3E4B782020BC9BAA003106D5 /* EnumObjectImpl.hpp */,
-				3E4B781C20BC09B1003106D5 /* EnumObject.hpp */,
+				3EF8DDC7236BA89000517CBC /* CardDeck.hpp */,
 				3EF8DDC9236BA9E300517CBC /* CardDeckImpl.cpp */,
 				3EF8DDCA236BA9E300517CBC /* CardDeckImpl.hpp */,
+				3E4B781720BBB000003106D5 /* CardImpl.hpp */,
+				3E4B781C20BC09B1003106D5 /* EnumObject.hpp */,
+				3E4B782020BC9BAA003106D5 /* EnumObjectImpl.hpp */,
+				3E4B781920BBB6F8003106D5 /* FrenchCard.cpp */,
+				3E4B781A20BBB6F8003106D5 /* FrenchCard.hpp */,
+				3E4B780F20BBA42E003106D5 /* main.cpp */,
 				3EF8DDCC236D74C300517CBC /* TarotDeck.cpp */,
 				3EF8DDCD236D74C300517CBC /* TarotDeck.hpp */,
+				3EF8DDC6236B896600517CBC /* TarotMajorArcanaCard.hpp */,
+				3EE79CC7236A6A68006F8E6A /* TarotMinorArcanaCard.hpp */,
 			);
 			path = blackjack_20180527_1941;
 			sourceTree = "<group>";

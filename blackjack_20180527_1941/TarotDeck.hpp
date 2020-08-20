@@ -19,7 +19,7 @@ using namespace std;
 
 class TarotDeck {
     
-    public: class {
+    private: class {
         private: vector<Card*> value;
         public: operator vector<Card*> () const {
             return value;
@@ -35,7 +35,7 @@ class TarotDeck {
     const int minorArcanaFaces = 14;
     const int minorArcanaSuits = 4;
     const int majorArcanaFaces = 22;
-    const int count = minorArcanaFaces * minorArcanaSuits + majorArcanaFaces;
+    public: const int count = minorArcanaFaces * minorArcanaSuits + majorArcanaFaces;
     
     public: TarotDeck() {
         
@@ -74,7 +74,7 @@ class TarotDeck {
 //        assert ((0 <= index) && (index < count));
         
         Card* aCard = deck[index];
-        cout << "index [" << index << "] deck + index [" << (Card*)deck[index] << "] [" << aCard << "]" << endl;
+//        cout << "index [" << index << "] deck + index [" << deck[index] << "] [" << aCard << "]" << endl;
         return aCard;
     }
 };

@@ -16,16 +16,6 @@
 
 using namespace std;
 
-void printCard(Card* aCard) {
-    if (!aCard) { // aCard != NULL
-        cout << "No Card" << endl;
-        return;
-    }
-    cout << "F[" << aCard->getFace()->getRawValue() << "][" << aCard->getFace()->getDescription() << "]";
-    cout << " of S[" << aCard->getSuit()->getRawValue() << "][" << aCard->getSuit()->getDescription() << "]";
-    cout << endl;
-}
-
 class Random {
 protected:
     static random_device _seed;
@@ -34,8 +24,8 @@ protected:
 
 public:
     static unsigned long genSeed() {
-        return (  static_cast<unsigned long>(time(NULL))      << 16 )
-        | ( (static_cast<unsigned long>(clock()) & 0xFF) << 8  );
+        return (static_cast<unsigned long>(time(NULL)) << 16)
+        | ( (static_cast<unsigned long>(clock()) & 0xFF) << 8);
 //        | ( (static_cast<unsigned long>(seed_count++) & 0xFF) );
     }
     
@@ -58,7 +48,8 @@ int main(int argc, const char * argv[]) {
     TarotDeck* tarotDeck = new TarotDeck();
     
     for (int i=0; i < tarotDeck->count; i++) {
-        printCard(tarotDeck->deck[i]);
+        Card* card = (*tarotDeck)[i];
+        card->print();
     }
     
     return 0;

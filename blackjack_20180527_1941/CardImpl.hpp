@@ -10,6 +10,7 @@
 #define CardImpl_hpp
 
 #include <cstdio>
+#include <iostream>
 
 #include "Card.hpp"
 
@@ -31,6 +32,12 @@ public:
     
     EnumObject* getSuit() {
         return new S(*_suit);
+    }
+    
+    void print() {
+        cout << "F[" << getFace()->getRawValue() << "][" << getFace()->getDescription() << "]";
+        cout << " of S[" << getSuit()->getRawValue() << "][" << getSuit()->getDescription() << "]";
+        cout << endl;
     }
 };
 

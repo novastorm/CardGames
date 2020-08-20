@@ -105,6 +105,12 @@ class Card: public CardImpl<Face, Suit> {
     
 public:
     Card(Face face, Suit suit) noexcept: CardImpl(face, suit) {}
+    
+    void print() {
+//        cout << "F[" << getFace()->getRawValue() << "][" << getFace()->getDescription() << "]";
+        cout << "[" << getFace()->getDescription() << "]";
+        cout << endl;
+    }
 };
 
 }
