@@ -19,18 +19,7 @@ using namespace std;
 
 class TarotDeck {
     
-    private: class {
-        private: vector<Card*> value;
-        public: operator vector<Card*> () const {
-            return value;
-        }
-        public: void operator = (const vector<Card*> &newValue) {
-            value = newValue;
-        }
-        public: Card* operator [] (int index) {
-            return value[index];
-        }
-    } deck;
+    private: vector<Card*> deck;
     
     const int minorArcanaFaces = 14;
     const int minorArcanaSuits = 4;
