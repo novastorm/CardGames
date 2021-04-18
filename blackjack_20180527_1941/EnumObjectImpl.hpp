@@ -23,12 +23,14 @@ protected:
     const string _descriptions[0];
     
 public:
+    // Create EnumObject with raw value
     EnumObjectImpl<T> (int rawValue): _rawValue(rawValue) {}
+    // Create EnumObject with enum
     EnumObjectImpl<T> (T value): _rawValue(value) {}
     
-    int getRawValue() const { return _rawValue; }
-    
-    string getDescription() const { return _descriptions[_rawValue]; }
+    int rawValue() const { return _rawValue; }
+
+    string description() const { return _descriptions[_rawValue]; }
 };
 
 #endif /* EnumObjectImpl_hpp */

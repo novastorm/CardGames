@@ -26,18 +26,30 @@ public:
         _suit = new S(suit);
     }
     
-    EnumObject* getFace() {
+    EnumObject* face() {
         return new F(*_face);
     }
     
-    EnumObject* getSuit() {
+    EnumObject* suit() {
         return new S(*_suit);
     }
     
     void print() {
-        cout << "F[" << getFace()->getRawValue() << "][" << getFace()->getDescription() << "]";
-        cout << " of S[" << getSuit()->getRawValue() << "][" << getSuit()->getDescription() << "]";
+        cout << "F[" << face()->rawValue() << "][" << face()->description() << "]";
+        cout << " of S[" << suit()->rawValue() << "][" << suit()->description() << "]";
         cout << endl;
+    }
+    
+    string description() {
+        std::string returnValue = (
+            "F["
+            + std::to_string(face()->rawValue()) + "]["
+            + face()->description() + "]"
+            + " of S["
+            + std::to_string(suit()->rawValue()) + "]["
+            + suit()->description() + "]"
+        );
+        return returnValue;
     }
 };
 

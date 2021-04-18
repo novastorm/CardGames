@@ -14,8 +14,8 @@
 #include "Card.hpp"
 
 class CardDeck {
-public: virtual Card* getCard() =0;
-public: virtual Card* peekCard() = 0;
+public: virtual int count() =0;
+public: virtual Card* operator[] (int index) =0;
 };
 
 #endif /* CardImpl_hpp */

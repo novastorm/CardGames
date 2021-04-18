@@ -12,23 +12,24 @@
 #include <iostream>
 #include <vector>
 #include "Card.hpp"
+#include "CardDeck.hpp"
 #include "TarotMinorArcanaCard.hpp"
 #include "TarotMajorArcanaCard.hpp"
 
 using namespace std;
 
-class TarotDeck {
+class TarotDeck: public CardDeck {
     
     private: vector<Card*> deck;
     
     const int minorArcanaFaces = 14;
     const int minorArcanaSuits = 4;
     const int majorArcanaFaces = 22;
-    public: const int count = minorArcanaFaces * minorArcanaSuits + majorArcanaFaces;
+    public: const int _count = minorArcanaFaces * minorArcanaSuits + majorArcanaFaces;
     
     public: TarotDeck() {
         
-        vector<Card*> newDeck(count);
+        vector<Card*> newDeck(_count);
         Card* newCard;
         
         int i;
@@ -40,7 +41,6 @@ class TarotDeck {
                     TarotMinorArcanaCard::Suit(s)
                     );
                 newDeck[i] = newCard;
-//                cout << "&newDeck[" << i << "] [" << &newDeck[i] << "] => [" << newDeck[i] << "] newCard [" << newCard << "]" << endl;
             }
         }
         
@@ -53,18 +53,22 @@ class TarotDeck {
                 TarotMajorArcanaCard::Suit(0)
                 );
             newDeck[i] = newCard;
-//            cout << "&newDeck[" << i << "] [" << &newDeck[i] << "] " << "newCard [" << newCard << "]" << endl;
         }
             
         deck = newDeck;
     }
     
-    public: Card* operator [] (int index) {
-//        assert ((0 <= index) && (index < count));
+public:
+    Card* operator [] (int index) {
+    //    assert ((0 <= index) && (index < count));
         
         Card* aCard = deck[index];
-//        cout << "index [" << index << "] deck + index [" << deck[index] << "] [" << aCard << "]" << endl;
         return aCard;
     }
+    
+    int count() {
+        return _count;
+    }
+
 };
 #endif /* TarotDeck_hpp */

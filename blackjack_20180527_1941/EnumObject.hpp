@@ -16,8 +16,8 @@ using namespace std;
 class EnumObject {
 
 public:
-    virtual int getRawValue() const =0;
-    virtual string getDescription() const =0;
+    virtual int rawValue() const =0;
+    virtual string description() const =0;
 };
 
 #endif /* EnumObject_hpp */

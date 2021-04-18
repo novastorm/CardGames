@@ -37,20 +37,62 @@ public:
         uniform_int_distribution<> randomizer(lower, upper);
         return randomizer(_generator);
     }
+    static mt19937_64 generator() {
+        if (!_isSeeded) {
+            _generator.seed(_seed());
+            _isSeeded = true;
+        }
+        return _generator;
+    }
 };
 
 random_device Random::_seed;
 mt19937_64 Random::_generator;
 bool Random::_isSeeded = false;
 
+class GameDeck {
+private:
+    vector<Card*> _shoe;
+    int numberOfCards;
+    int nextIndex;
+public:
+    GameDeck(CardDeck* intrinsicDeck, int numberOfDecks) {
+        numberOfCards = numberOfDecks * (*intrinsicDeck).count();
+        vector<Card*> newShoe(numberOfCards);
+        
+        for (int i=0; i<numberOfCards; i++) {
+            int cardIndex = i % (*intrinsicDeck).count();
+            newShoe[i] = (*intrinsicDeck)[cardIndex];
+        }
+        _shoe = newShoe;
+        shuffle();
+    }
+    
+    void shuffle() {
+        std::shuffle(std::begin(_shoe), std::end(_shoe), Random::generator());
+        nextIndex = 0;
+    }
+    
+    Card* deal() {
+        Card* card = _shoe[nextIndex];
+        nextIndex += 1;
+        return card;
+    }
+    
+    void print() {
+        for (int i=0; i < numberOfCards; i++) {
+            Card* card = _shoe[i];
+            cout << card->description() << endl;
+        }
+    }
+};
+
 int main(int argc, const char * argv[]) {
         
     TarotDeck* tarotDeck = new TarotDeck();
     
-    for (int i=0; i < tarotDeck->count; i++) {
-        Card* card = (*tarotDeck)[i];
-        card->print();
-    }
+    GameDeck* gameDeck = new GameDeck(tarotDeck, 2);
+    gameDeck->print();
     
     return 0;
 }
