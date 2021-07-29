@@ -91,18 +91,18 @@ class Card: public CardImpl<Face, Suit> {
 public:
     Card(Face face, Suit suit) noexcept: CardImpl(face, suit) {}
     
-    void print() {
-        cout << "[" << face()->description() << "]";
-        cout << " of [" << suit()->description() << "]";
+    void drawCard() {
+        cout << "[" << face->description() << "]";
+        cout << " of [" << suit->description() << "]";
         cout << endl;
     }
     
     string description() {
         return
             "["
-            + face()->description() + "]"
+            + face->description() + "]"
             + " of ["
-            + suit()->description() + "]"
+            + suit->description() + "]"
         ;
     }
 };

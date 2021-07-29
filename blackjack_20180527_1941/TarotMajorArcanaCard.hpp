@@ -106,16 +106,15 @@ class Card: public CardImpl<Face, Suit> {
 public:
     Card(Face face, Suit suit) noexcept: CardImpl(face, suit) {}
     
-    void print() {
-//        cout << "F[" << face()->rawValue() << "][" << face()->description() << "]";
-        cout << "[" << face()->description() << "]";
+    void drawCard() {
+        cout << "[" << face->description() << "]";
         cout << endl;
     }
     
     string description() {
         return
             "["
-            + face()->description() + "]"
+            + face->description() + "]"
         ;
     }
 };

@@ -79,7 +79,7 @@ public:
         return card;
     }
     
-    void print() {
+    void drawDeck() {
         for (int i=0; i < numberOfCards; i++) {
             Card* card = _shoe[i];
             cout << card->description() << endl;
@@ -91,8 +91,8 @@ int main(int argc, const char * argv[]) {
         
     TarotDeck* tarotDeck = new TarotDeck();
     
-    GameDeck* gameDeck = new GameDeck(tarotDeck, 2);
-    gameDeck->print();
+    GameDeck* aTarotGameDeck = new GameDeck(tarotDeck, 2);
+    aTarotGameDeck->drawDeck();
     
     return 0;
 }
