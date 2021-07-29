@@ -7,48 +7,12 @@
 //
 
 #include <iostream>
-#include <chrono>
-#include <memory>
-#include <random>
 
 #include "Card.hpp"
 #include "TarotDeck.hpp"
+#include "Random.hpp"
 
 using namespace std;
-
-class Random {
-protected:
-    static random_device _seed;
-    static mt19937_64 _generator;
-    static bool _isSeeded;
-
-public:
-    static unsigned long genSeed() {
-        return (static_cast<unsigned long>(time(NULL)) << 16)
-        | ( (static_cast<unsigned long>(clock()) & 0xFF) << 8);
-//        | ( (static_cast<unsigned long>(seed_count++) & 0xFF) );
-    }
-    
-    static int getRandom(int upper, int lower = 0) {
-        if (!_isSeeded) {
-            _generator.seed(_seed());
-            _isSeeded = true;
-        }
-        uniform_int_distribution<> randomizer(lower, upper);
-        return randomizer(_generator);
-    }
-    static mt19937_64 generator() {
-        if (!_isSeeded) {
-            _generator.seed(_seed());
-            _isSeeded = true;
-        }
-        return _generator;
-    }
-};
-
-random_device Random::_seed;
-mt19937_64 Random::_generator;
-bool Random::_isSeeded = false;
 
 class GameDeck {
 private:
@@ -57,11 +21,11 @@ private:
     int nextIndex;
 public:
     GameDeck(CardDeck* intrinsicDeck, int numberOfDecks) {
-        numberOfCards = numberOfDecks * (*intrinsicDeck).count();
+        numberOfCards = numberOfDecks * (*intrinsicDeck).getCount();
         vector<Card*> newShoe(numberOfCards);
         
         for (int i=0; i<numberOfCards; i++) {
-            int cardIndex = i % (*intrinsicDeck).count();
+            int cardIndex = i % (*intrinsicDeck).getCount();
             newShoe[i] = (*intrinsicDeck)[cardIndex];
         }
         _shoe = newShoe;
@@ -90,10 +54,17 @@ public:
 int main(int argc, const char * argv[]) {
         
     TarotDeck* tarotDeck = new TarotDeck();
-    
     GameDeck* aTarotGameDeck = new GameDeck(tarotDeck, 2);
+
+    cout << "Tarot Deck" << endl;
     aTarotGameDeck->drawDeck();
-    
+
+//    TarotDeck* tarotDeck = new TarotDeck();
+//    GameDeck* aTarotGameDeck = new GameDeck(tarotDeck, 2);
+//
+//    cout << "Tarot Deck" << endl;
+//    aTarotGameDeck->drawDeck();
+
     return 0;
 }
 

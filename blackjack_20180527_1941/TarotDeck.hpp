@@ -20,16 +20,17 @@ using namespace std;
 
 class TarotDeck: public CardDeck {
     
-    private: vector<Card*> deck;
+private:
+    vector<Card*> deck;
     
     const int minorArcanaFaces = 14;
     const int minorArcanaSuits = 4;
     const int majorArcanaFaces = 22;
-    public: const int _count = minorArcanaFaces * minorArcanaSuits + majorArcanaFaces;
+    const int count = minorArcanaFaces * minorArcanaSuits + majorArcanaFaces;
     
-    public: TarotDeck() {
-        
-        vector<Card*> newDeck(_count);
+public:
+    TarotDeck() {
+        vector<Card*> newDeck(count);
         Card* newCard;
         
         int i;
@@ -39,36 +40,35 @@ class TarotDeck: public CardDeck {
                 newCard = new TarotMinorArcanaCard::Card(
                     TarotMinorArcanaCard::Face(f+1),
                     TarotMinorArcanaCard::Suit(s)
-                    );
+                );
                 newDeck[i] = newCard;
             }
         }
         
         auto numMinorArcanaCards = minorArcanaSuits * minorArcanaFaces;
-
+        
         for (int f=0; f < majorArcanaFaces; f++) {
             i = numMinorArcanaCards + f;
             newCard = new TarotMajorArcanaCard::Card(
                 TarotMajorArcanaCard::Face(f),
                 TarotMajorArcanaCard::Suit(0)
-                );
+            );
             newDeck[i] = newCard;
         }
-            
+        
         deck = newDeck;
     }
     
-public:
     Card* operator [] (int index) {
-    //    assert ((0 <= index) && (index < count));
+        //    assert ((0 <= index) && (index < count));
         
         Card* aCard = deck[index];
         return aCard;
     }
     
-    int count() {
-        return _count;
+    int getCount() {
+        return count;
     }
-
+    
 };
 #endif /* TarotDeck_hpp */

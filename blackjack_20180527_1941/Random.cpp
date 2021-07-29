@@ -7,3 +7,7 @@
 //
 
 #include "Random.hpp"
+
+random_device Random::_seed;
+mt19937_64 Random::_generator;
+bool Random::_isSeeded = false;

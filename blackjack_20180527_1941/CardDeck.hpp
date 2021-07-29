@@ -14,7 +14,7 @@
 #include "Card.hpp"
 
 class CardDeck {
-public: virtual int count() =0;
+public: virtual int getCount() =0;
 public: virtual Card* operator[] (int index) =0;
 };
 
