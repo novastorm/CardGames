@@ -13,7 +13,3 @@ Card* CardDeckImpl::operator [] (int index) {
     Card* aCard = deck[index];
     return aCard;
 }
-
-int CardDeckImpl::getCount() {
-    return count;
-}

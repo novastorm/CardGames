@@ -21,7 +21,7 @@ protected:
     
 public:
     Card* operator [] (int index);
-    int getCount();
+    int getCount() { return count; };
 };
 
 #endif /* CardDeckImpl_hpp */
