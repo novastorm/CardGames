@@ -13,7 +13,7 @@
 
 #include "Card.hpp"
 
-class IntrinsicCardDeck {
+class CardDeck {
 public: virtual int getCount() =0;
 public: virtual Card* operator[] (int index) =0;
 };

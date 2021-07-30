@@ -12,7 +12,7 @@
 #include <iostream>
 #include <vector>
 #include "Card.hpp"
-#include "IntrinsicCardDeck.hpp"
+#include "CardDeck.hpp"
 #include "CardDeckImpl.hpp"
 #include "TarotMinorArcanaCard.hpp"
 #include "TarotMajorArcanaCard.hpp"

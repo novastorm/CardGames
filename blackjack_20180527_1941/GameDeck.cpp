@@ -14,7 +14,7 @@
 
 using namespace std;
 
-GameDeck::GameDeck(IntrinsicCardDeck* intrinsicDeck, int numberOfDecks) {
+GameDeck::GameDeck(CardDeck* intrinsicDeck, int numberOfDecks) {
     numberOfCards = numberOfDecks * (*intrinsicDeck).getCount();
     vector<Card*> newShoe(numberOfCards);
     

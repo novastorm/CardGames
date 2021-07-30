@@ -11,7 +11,7 @@
 
 #include <vector>
 #include "Card.hpp"
-#include "IntrinsicCardDeck.hpp"
+#include "CardDeck.hpp"
 
 class GameDeck {
 private:
@@ -19,7 +19,7 @@ private:
     int numberOfCards;
     int nextIndex;
 public:
-    GameDeck(IntrinsicCardDeck* intrinsicDeck, int numberOfDecks);
+    GameDeck(CardDeck* intrinsicDeck, int numberOfDecks);
     
     void shuffle();
     

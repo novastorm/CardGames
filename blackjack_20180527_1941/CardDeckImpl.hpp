@@ -12,9 +12,9 @@
 #include <stdio.h>
 #include <vector>
 
-#include "IntrinsicCardDeck.hpp"
+#include "CardDeck.hpp"
 
-class CardDeckImpl: public IntrinsicCardDeck {
+class CardDeckImpl: public CardDeck {
 protected:
     vector<Card*> deck;
     int count;
