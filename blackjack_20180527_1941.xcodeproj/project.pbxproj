@@ -14,6 +14,7 @@
 		3EF8DDCE236D74C300517CBC /* TarotDeck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EF8DDCC236D74C300517CBC /* TarotDeck.cpp */; };
 		3EFD6D5626B36F84000165FD /* Random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD6D5426B36F84000165FD /* Random.cpp */; };
 		3EFD6D5926B37694000165FD /* GameDeck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD6D5726B37694000165FD /* GameDeck.cpp */; };
+		3EFD6D5C26B3B943000165FD /* FrenchCardDeck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD6D5A26B3B943000165FD /* FrenchCardDeck.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +49,8 @@
 		3EFD6D5526B36F84000165FD /* Random.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Random.hpp; sourceTree = "<group>"; };
 		3EFD6D5726B37694000165FD /* GameDeck.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameDeck.cpp; sourceTree = "<group>"; };
 		3EFD6D5826B37694000165FD /* GameDeck.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameDeck.hpp; sourceTree = "<group>"; };
+		3EFD6D5A26B3B943000165FD /* FrenchCardDeck.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FrenchCardDeck.cpp; sourceTree = "<group>"; };
+		3EFD6D5B26B3B943000165FD /* FrenchCardDeck.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FrenchCardDeck.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,7 @@
 		3E4B780E20BBA42E003106D5 /* blackjack_20180527_1941 */ = {
 			isa = PBXGroup;
 			children = (
+				3E4B780F20BBA42E003106D5 /* main.cpp */,
 				3EBA67DE20C4B8CB00B3BDE3 /* Card.hpp */,
 				3EF8DDC7236BA89000517CBC /* CardDeck.hpp */,
 				3EF8DDC9236BA9E300517CBC /* CardDeckImpl.cpp */,
@@ -89,7 +93,8 @@
 				3E4B782020BC9BAA003106D5 /* EnumObjectImpl.hpp */,
 				3E4B781920BBB6F8003106D5 /* FrenchCard.cpp */,
 				3E4B781A20BBB6F8003106D5 /* FrenchCard.hpp */,
-				3E4B780F20BBA42E003106D5 /* main.cpp */,
+				3EFD6D5A26B3B943000165FD /* FrenchCardDeck.cpp */,
+				3EFD6D5B26B3B943000165FD /* FrenchCardDeck.hpp */,
 				3EF8DDCC236D74C300517CBC /* TarotDeck.cpp */,
 				3EF8DDCD236D74C300517CBC /* TarotDeck.hpp */,
 				3EF8DDC6236B896600517CBC /* TarotMajorArcanaCard.hpp */,
@@ -161,6 +166,7 @@
 			files = (
 				3EFD6D5626B36F84000165FD /* Random.cpp in Sources */,
 				3EF8DDCE236D74C300517CBC /* TarotDeck.cpp in Sources */,
+				3EFD6D5C26B3B943000165FD /* FrenchCardDeck.cpp in Sources */,
 				3EFD6D5926B37694000165FD /* GameDeck.cpp in Sources */,
 				3EF8DDCB236BA9E300517CBC /* CardDeckImpl.cpp in Sources */,
 				3EF8DDC8236BA89000517CBC /* CardDeck.hpp in Sources */,
