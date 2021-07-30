@@ -7,3 +7,13 @@
 //
 
 #include "CardDeckImpl.hpp"
+
+Card* CardDeckImpl::operator [] (int index) {
+    //    assert ((0 <= index) && (index < count));    
+    Card* aCard = deck[index];
+    return aCard;
+}
+
+int CardDeckImpl::getCount() {
+    return count;
+}

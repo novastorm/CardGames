@@ -12,24 +12,25 @@
 #include <iostream>
 #include <vector>
 #include "Card.hpp"
-#include "CardDeck.hpp"
+#include "IntrinsicCardDeck.hpp"
+#include "CardDeckImpl.hpp"
 #include "TarotMinorArcanaCard.hpp"
 #include "TarotMajorArcanaCard.hpp"
 
 using namespace std;
 
-class TarotDeck: public CardDeck {
+class TarotDeck: public CardDeckImpl {
     
 private:
-    vector<Card*> deck;
+//    vector<Card*> deck;
     
     const int minorArcanaFaces = 14;
     const int minorArcanaSuits = 4;
     const int majorArcanaFaces = 22;
-    const int count = minorArcanaFaces * minorArcanaSuits + majorArcanaFaces;
     
 public:
     TarotDeck() {
+        count = minorArcanaFaces * minorArcanaSuits + majorArcanaFaces;
         vector<Card*> newDeck(count);
         Card* newCard;
         
@@ -58,17 +59,6 @@ public:
         
         deck = newDeck;
     }
-    
-    Card* operator [] (int index) {
-        //    assert ((0 <= index) && (index < count));
-        
-        Card* aCard = deck[index];
-        return aCard;
-    }
-    
-    int getCount() {
-        return count;
-    }
-    
 };
+
 #endif /* TarotDeck_hpp */

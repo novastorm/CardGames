@@ -10,20 +10,18 @@
 #define CardDeckImpl_hpp
 
 #include <stdio.h>
+#include <vector>
 
-#include "CardDeck.hpp"
+#include "IntrinsicCardDeck.hpp"
 
-class CardDeckImpl: public CardDeck {
-protected: Card** cardDeck;
-protected: int count;
+class CardDeckImpl: public IntrinsicCardDeck {
+protected:
+    vector<Card*> deck;
+    int count;
+    
 public:
-    CardDeckImpl() {}
-    CardDeckImpl(Card** cards, int count, int decks) {}
-    
-    // add card
-    // show card
-    // remove card
-    
+    Card* operator [] (int index);
+    int getCount();
 };
 
 #endif /* CardDeckImpl_hpp */
