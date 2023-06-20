@@ -9,6 +9,18 @@
 #ifndef GameHand_hpp
 #define GameHand_hpp
 
-#include <stdio.h>
+#include <vector>
+#include "Card.hpp"
 
+class GameHand {
+private:
+    vector<Card*> card_list;
+public:
+    auto getCards() {
+        return card_list;
+    }
+    void addCard(Card* aCard) {
+        card_list.push_back(aCard);
+    }
+};
 #endif /* GameHand_hpp */

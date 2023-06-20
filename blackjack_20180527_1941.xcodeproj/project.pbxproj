@@ -15,6 +15,10 @@
 		3EFD6D5626B36F84000165FD /* Random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD6D5426B36F84000165FD /* Random.cpp */; };
 		3EFD6D5926B37694000165FD /* GameDeck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD6D5726B37694000165FD /* GameDeck.cpp */; };
 		3EFD6D5C26B3B943000165FD /* FrenchCardDeck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD6D5A26B3B943000165FD /* FrenchCardDeck.cpp */; };
+		3EFD6D5F26B3C1F6000165FD /* BlackJackGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD6D5D26B3C1F6000165FD /* BlackJackGame.cpp */; };
+		3EFD6D6226B3C393000165FD /* GameHand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD6D6026B3C393000165FD /* GameHand.cpp */; };
+		3EFD6D6526B3C852000165FD /* BlackJackPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD6D6326B3C852000165FD /* BlackJackPlayer.cpp */; };
+		3EFD6D6826B3C8B6000165FD /* GamePlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD6D6626B3C8B6000165FD /* GamePlayer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +55,14 @@
 		3EFD6D5826B37694000165FD /* GameDeck.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameDeck.hpp; sourceTree = "<group>"; };
 		3EFD6D5A26B3B943000165FD /* FrenchCardDeck.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FrenchCardDeck.cpp; sourceTree = "<group>"; };
 		3EFD6D5B26B3B943000165FD /* FrenchCardDeck.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FrenchCardDeck.hpp; sourceTree = "<group>"; };
+		3EFD6D5D26B3C1F6000165FD /* BlackJackGame.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BlackJackGame.cpp; sourceTree = "<group>"; };
+		3EFD6D5E26B3C1F6000165FD /* BlackJackGame.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BlackJackGame.hpp; sourceTree = "<group>"; };
+		3EFD6D6026B3C393000165FD /* GameHand.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameHand.cpp; sourceTree = "<group>"; };
+		3EFD6D6126B3C393000165FD /* GameHand.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameHand.hpp; sourceTree = "<group>"; };
+		3EFD6D6326B3C852000165FD /* BlackJackPlayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BlackJackPlayer.cpp; sourceTree = "<group>"; };
+		3EFD6D6426B3C852000165FD /* BlackJackPlayer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BlackJackPlayer.hpp; sourceTree = "<group>"; };
+		3EFD6D6626B3C8B6000165FD /* GamePlayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GamePlayer.cpp; sourceTree = "<group>"; };
+		3EFD6D6726B3C8B6000165FD /* GamePlayer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GamePlayer.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +115,14 @@
 				3EFD6D5526B36F84000165FD /* Random.hpp */,
 				3EFD6D5726B37694000165FD /* GameDeck.cpp */,
 				3EFD6D5826B37694000165FD /* GameDeck.hpp */,
+				3EFD6D5D26B3C1F6000165FD /* BlackJackGame.cpp */,
+				3EFD6D5E26B3C1F6000165FD /* BlackJackGame.hpp */,
+				3EFD6D6026B3C393000165FD /* GameHand.cpp */,
+				3EFD6D6126B3C393000165FD /* GameHand.hpp */,
+				3EFD6D6326B3C852000165FD /* BlackJackPlayer.cpp */,
+				3EFD6D6426B3C852000165FD /* BlackJackPlayer.hpp */,
+				3EFD6D6626B3C8B6000165FD /* GamePlayer.cpp */,
+				3EFD6D6726B3C8B6000165FD /* GamePlayer.hpp */,
 			);
 			path = blackjack_20180527_1941;
 			sourceTree = "<group>";
@@ -166,12 +186,16 @@
 			files = (
 				3EFD6D5626B36F84000165FD /* Random.cpp in Sources */,
 				3EF8DDCE236D74C300517CBC /* TarotDeck.cpp in Sources */,
+				3EFD6D6826B3C8B6000165FD /* GamePlayer.cpp in Sources */,
+				3EFD6D5F26B3C1F6000165FD /* BlackJackGame.cpp in Sources */,
 				3EFD6D5C26B3B943000165FD /* FrenchCardDeck.cpp in Sources */,
 				3EFD6D5926B37694000165FD /* GameDeck.cpp in Sources */,
 				3EF8DDCB236BA9E300517CBC /* CardDeckImpl.cpp in Sources */,
 				3EF8DDC8236BA89000517CBC /* CardDeck.hpp in Sources */,
 				3E4B781020BBA42E003106D5 /* main.cpp in Sources */,
+				3EFD6D6226B3C393000165FD /* GameHand.cpp in Sources */,
 				3E4B781B20BBB6F8003106D5 /* FrenchCard.cpp in Sources */,
+				3EFD6D6526B3C852000165FD /* BlackJackPlayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

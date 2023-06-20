@@ -9,6 +9,10 @@
 #ifndef BlackJackPlayer_hpp
 #define BlackJackPlayer_hpp
 
-#include <stdio.h>
+#include "GamePlayer.hpp"
+
+class BlackJackPlayer: public GamePlayer {
+    
+};
 
 #endif /* BlackJackPlayer_hpp */

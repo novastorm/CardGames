@@ -19,8 +19,8 @@ using namespace std;
 template<typename T>
 class EnumObjectImpl: public EnumObject {
 protected:
-    const int _rawValue;
-    const string _descriptions[0];
+    int _rawValue;
+    string _descriptions[0];
     
 public:
     // Create EnumObject with raw value

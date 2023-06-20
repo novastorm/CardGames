@@ -39,7 +39,7 @@ enum FaceEnum {
 
 class Face: public EnumObjectImpl<TarotMinorArcanaCard::FaceEnum> {
 protected:
-    const string _descriptions[15] = {
+    string _descriptions[15] = {
         "invalid",
         "ace",
         "two",
@@ -73,7 +73,7 @@ enum SuitEnum: int {
 
 class Suit: public EnumObjectImpl<TarotMinorArcanaCard::SuitEnum> {
 protected:
-    const string _descriptions[4] = {
+    string _descriptions[4] = {
         "swords",
         "chalices",
         "pentacles",

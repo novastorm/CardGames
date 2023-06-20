@@ -9,6 +9,24 @@
 #ifndef BlackJackGame_hpp
 #define BlackJackGame_hpp
 
-#include <stdio.h>
+#include <map>
+#include "FrenchCardDeck.hpp"
+#include "GameDeck.hpp"
+#include "GameHand.hpp"
+#include "BlackJackPlayer.hpp"
+
+class BlackJackGame {
+private:
+    GameDeck* aGameDeck;
+    GameHand* activeHand;
+    vector<GamePlayer*> player_list;
+    GamePlayer* dealer;
+    map<FrenchCard::Face, unsigned int, std::hash<int>> valueMap;
+public:
+    BlackJackGame();
+    void dealCardToActiveHand();
+    
+};
 
 #endif /* BlackJackGame_hpp */
+

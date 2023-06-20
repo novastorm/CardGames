@@ -51,7 +51,7 @@ enum FaceEnum {
 
 class Face: public EnumObjectImpl<FaceEnum> {
 protected:
-    const string _descriptions[22] = {
+    string _descriptions[22] = {
         "the_magician",
         "the_high_priestess",
         "the_empress",
@@ -91,7 +91,7 @@ enum SuitEnum: int {
 
 class Suit: public EnumObjectImpl<SuitEnum> {
 protected:
-    const string _descriptions[1] = {
+    string _descriptions[1] = {
         "none"
     };
     

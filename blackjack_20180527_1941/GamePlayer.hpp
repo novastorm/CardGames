@@ -9,6 +9,8 @@
 #ifndef GamePlayer_hpp
 #define GamePlayer_hpp
 
-#include <stdio.h>
+class GamePlayer {
+    
+};
 
 #endif /* GamePlayer_hpp */
