@@ -9,6 +9,6 @@
 #include "BlackJackGame.hpp"
 
 BlackJackGame::BlackJackGame() {
-    valueMap[FrenchCard::ace] = 1;
+//    valueMap[FrenchCard::ace] = 1;
 //    valueMap[FrenchCard::two] = 2;
 }

@@ -38,6 +38,12 @@ int main(int argc, const char * argv[]) {
     aGameHand->addCard(aGameDeck->deal());
     aGameHand->addCard(aGameDeck->deal());
     aGameHand->addCard(aGameDeck->deal());
+    
+    cout << "Game Hand Cards" << endl;
+    vector<Card*> aCardList = aGameHand->getCards();
+    for_each(aCardList.begin(), aCardList.end(), [](Card* aCard){
+        cout << aCard->description() << endl;
+    });
 
     return 0;
 }

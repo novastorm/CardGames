@@ -9,7 +9,7 @@
 #ifndef BlackJackGame_hpp
 #define BlackJackGame_hpp
 
-#include <map>
+//#include <map>
 #include "FrenchCardDeck.hpp"
 #include "GameDeck.hpp"
 #include "GameHand.hpp"
@@ -21,7 +21,7 @@ private:
     GameHand* activeHand;
     vector<GamePlayer*> player_list;
     GamePlayer* dealer;
-    map<FrenchCard::Face, unsigned int, std::hash<int>> valueMap;
+//    map<FrenchCard::Face, unsigned int, std::hash<int>> valueMap;
 public:
     BlackJackGame();
     void dealCardToActiveHand();
