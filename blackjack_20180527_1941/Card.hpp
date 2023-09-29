@@ -18,7 +18,7 @@ public:
     virtual EnumObject* face() =0;
     virtual EnumObject* suit() =0;
     virtual void print() =0;
-    virtual string description() =0;
+    virtual std::string description() =0;
 };
 
 #endif /* Card_hpp */

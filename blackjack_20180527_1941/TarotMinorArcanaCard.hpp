@@ -16,7 +16,6 @@
 #include "CardImpl.hpp"
 #include "EnumObjectImpl.hpp"
 
-using namespace std;
 
 namespace TarotMinorArcanaCard {
 
@@ -39,7 +38,7 @@ enum FaceEnum {
 
 class Face: public EnumObjectImpl<TarotMinorArcanaCard::FaceEnum> {
 protected:
-    const string _descriptions[15] = {
+    const std::string _descriptions[15] = {
         "invalid",
         "ace",
         "two",
@@ -73,7 +72,7 @@ enum SuitEnum: int {
 
 class Suit: public EnumObjectImpl<TarotMinorArcanaCard::SuitEnum> {
 protected:
-    const string _descriptions[4] = {
+    const std::string _descriptions[4] = {
         "swords",
         "chalices",
         "pentacles",
@@ -91,20 +90,9 @@ class Card: public CardImpl<Face, Suit> {
 public:
     Card(Face face, Suit suit) noexcept: CardImpl(face, suit) {}
     
-    void print() {
-        cout << "[" << face()->description() << "]";
-        cout << " of [" << suit()->description() << "]";
-        cout << endl;
-    }
+    void print() override;
     
-    string description() {
-        return
-            "["
-            + face()->description() + "]"
-            + " of ["
-            + suit()->description() + "]"
-        ;
-    }
+    std::string description() override;
 };
 
 }

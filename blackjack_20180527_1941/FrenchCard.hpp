@@ -16,8 +16,6 @@
 #include "CardImpl.hpp"
 #include "EnumObjectImpl.hpp"
 
-using namespace std;
-
 namespace FrenchCard {
 
 enum FaceEnum: int {
@@ -39,7 +37,7 @@ enum FaceEnum: int {
 
 class Face: public EnumObjectImpl<FaceEnum> {
 protected:
-    const string _descriptions[14] = {
+    const std::string _descriptions[14] = {
         "joker",
         "ace",
         "two",
@@ -69,7 +67,7 @@ enum SuitEnum: int {
 
 class Suit: public EnumObjectImpl<SuitEnum> {
 protected:
-    const string _descriptions[4] = {
+    const std::string _descriptions[4] = {
         "spades",
         "hearts",
         "clubs",
@@ -87,19 +85,9 @@ class Card: public CardImpl<Face, Suit> {
 public:
     Card(Face face, Suit suit) noexcept: CardImpl(face, suit) {}
     
-    void print() {
-        cout 
-            << "[" << face()->description() << "]"
-            << " of [" << suit()->description() << "]"
-            << endl;
-    }
+    void print() override;
     
-    string description() {
-        return
-            "[" + face()->description() + "]"
-            + " of [" + suit()->description() + "]"
-            ;
-    }
+    std::string description() override;
 };
 
 }

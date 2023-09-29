@@ -14,23 +14,25 @@
 
 #include "EnumObject.hpp"
 
-using namespace std;
 
 template<typename T>
 class EnumObjectImpl: public EnumObject {
 protected:
     const int _rawValue;
-    const string _descriptions[0];
+    const std::string _descriptions[0];
     
 public:
     // Create EnumObject with raw value
-    EnumObjectImpl<T> (int rawValue): _rawValue(rawValue) {}
-    // Create EnumObject with enum
-    EnumObjectImpl<T> (T value): _rawValue(value) {}
+    EnumObjectImpl<T> (int rawValue);
     
-    int rawValue() const { return _rawValue; }
+    // Create EnumObject with enum
+    EnumObjectImpl<T> (T value);
+    
+    int rawValue() const;
 
-    string description() const { return _descriptions[_rawValue]; }
+    std::string description() const;
 };
+
+#include "EnumObjectImpl.tpp"
 
 #endif /* EnumObjectImpl_hpp */

@@ -100,6 +100,7 @@ int main(int argc, const char * argv[]) {
     aTarotGameDeck->print();
     
     cout << endl;
+    
     cout << "French Card Deck" << endl;
     aFrenchGameDeck->print();
     

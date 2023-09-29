@@ -16,6 +16,9 @@
 class CardDeck {
 public: virtual int count() =0;
 public: virtual Card* operator[] (int index) =0;
+// add card
+// show card
+// remove card
 };
 
 #endif /* CardImpl_hpp */

@@ -15,44 +15,21 @@
 #include "CardDeck.hpp"
 #include "FrenchCard.hpp"
 
-using namespace std;
-
 class FrenchCardDeck: public CardDeck {
     
 private: 
-    vector<Card*> deck;
+    std::vector<Card*> deck;
     const int cardFaces = 13;
     const int cardSuits = 4;
-    
-public: 
     const int _count = cardFaces * cardSuits;
+
+public: 
     
-    FrenchCardDeck() {
-        vector<Card*> newDeck(_count);
-        
-        Card* newCard;
-        
-        int i;
-        
-        for (int s=0; s < cardSuits; s++) {
-            for (int f=0; f < cardFaces; f++) {
-                newCard = new FrenchCard::Card(FrenchCard::Face(f+1), FrenchCard::Suit(s));
-                i = s * cardFaces + f;
-                newDeck[i] = newCard;
-            }
-        }
-        
-        deck = newDeck;
-    }
+    FrenchCardDeck();
     
-    Card* operator [] (int index) {
-        Card* aCard = deck[index];
-        return aCard;
-    }
+    Card* operator [] (int index);
     
-    int count() {
-        return _count;
-    }
+    int count();
 };
 
 #endif /* FrenchCardDeck_hpp */

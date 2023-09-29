@@ -1,13 +1,13 @@
 //
-//  TarotMajorCard.hpp
+//  TarotMajorArcanaCard.hpp
 //  blackjack_20180527_1941
 //
 //  Created by Adland Lee on 5/27/18.
 //  Copyright © 2018 4MFD. All rights reserved.
 //
 
-#ifndef TarotMajorCard_hpp
-#define TarotMajorCard_hpp
+#ifndef TarotMajorArcanaCard_hpp
+#define TarotMajorArcanaCard_hpp
 
 #include <array>
 #include <cstdio>
@@ -16,7 +16,6 @@
 #include "CardImpl.hpp"
 #include "EnumObjectImpl.hpp"
 
-using namespace std;
 
 namespace TarotMajorArcanaCard {
 
@@ -51,7 +50,7 @@ enum FaceEnum {
 
 class Face: public EnumObjectImpl<FaceEnum> {
 protected:
-    const string _descriptions[22] = {
+    const std::string _descriptions[22] = {
         "the_magician",
         "the_high_priestess",
         "the_empress",
@@ -91,7 +90,7 @@ enum SuitEnum: int {
 
 class Suit: public EnumObjectImpl<SuitEnum> {
 protected:
-    const string _descriptions[1] = {
+    const std::string _descriptions[1] = {
         "none"
     };
     
@@ -106,20 +105,11 @@ class Card: public CardImpl<Face, Suit> {
 public:
     Card(Face face, Suit suit) noexcept: CardImpl(face, suit) {}
     
-    void print() {
-//        cout << "F[" << face()->rawValue() << "][" << face()->description() << "]";
-        cout << "[" << face()->description() << "]";
-        cout << endl;
-    }
+    void print() override;
     
-    string description() {
-        return
-            "["
-            + face()->description() + "]"
-        ;
-    }
+    std::string description() override;
 };
 
 }
 
-#endif /* TarotMajorCard_hpp */
+#endif /* TarotMajorArcanaCard_hpp */

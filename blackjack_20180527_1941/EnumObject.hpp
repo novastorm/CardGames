@@ -11,13 +11,12 @@
 #include <cstdio>
 #include <string>
 
-using namespace std;
 
 class EnumObject {
 
 public:
     virtual int rawValue() const =0;
-    virtual string description() const =0;
+    virtual std::string description() const =0;
 };
 
 #endif /* EnumObject_hpp */

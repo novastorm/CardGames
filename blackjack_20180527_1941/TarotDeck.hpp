@@ -16,59 +16,24 @@
 #include "TarotMinorArcanaCard.hpp"
 #include "TarotMajorArcanaCard.hpp"
 
-using namespace std;
 
 class TarotDeck: public CardDeck {
     
-    private: vector<Card*> deck;
+private: 
+    
+    std::vector<Card*> deck;
     
     const int minorArcanaFaces = 14;
     const int minorArcanaSuits = 4;
     const int majorArcanaFaces = 22;
-    public: const int _count = minorArcanaFaces * minorArcanaSuits + majorArcanaFaces;
-    
-    public: TarotDeck() {
-        
-        vector<Card*> newDeck(_count);
-        Card* newCard;
-        
-        int i;
-        for (int s=0; s < minorArcanaSuits; s++) {
-            for (int f=0; f < minorArcanaFaces; f++) {
-                i = s * minorArcanaFaces + f;
-                newCard = new TarotMinorArcanaCard::Card(
-                    TarotMinorArcanaCard::Face(f+1),
-                    TarotMinorArcanaCard::Suit(s)
-                    );
-                newDeck[i] = newCard;
-            }
-        }
-        
-        auto numMinorArcanaCards = minorArcanaSuits * minorArcanaFaces;
-
-        for (int f=0; f < majorArcanaFaces; f++) {
-            i = numMinorArcanaCards + f;
-            newCard = new TarotMajorArcanaCard::Card(
-                TarotMajorArcanaCard::Face(f),
-                TarotMajorArcanaCard::Suit(0)
-                );
-            newDeck[i] = newCard;
-        }
-            
-        deck = newDeck;
-    }
+    const int _count = minorArcanaFaces * minorArcanaSuits + majorArcanaFaces;
     
 public:
-    Card* operator [] (int index) {
-    //    assert ((0 <= index) && (index < count));
-        
-        Card* aCard = deck[index];
-        return aCard;
-    }
+    TarotDeck();
     
-    int count() {
-        return _count;
-    }
-
+    Card* operator [] (int index);
+    
+    int count();
+    
 };
 #endif /* TarotDeck_hpp */

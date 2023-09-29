@@ -7,3 +7,24 @@
 //
 
 #include "FrenchCard.hpp"
+
+#include <cstdio>
+
+
+namespace FrenchCard {
+
+    void Card::print() {
+        std::cout
+            << "[" << face()->description() << "]"
+            << " of [" << suit()->description() << "]"
+            << std::endl;
+    }
+
+    std::string Card::description() {
+        return
+            "[" + face()->description() + "]"
+            + " of [" + suit()->description() + "]"
+            ;
+    }
+
+}
