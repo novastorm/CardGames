@@ -12,6 +12,7 @@
 		3EF8DDC8236BA89000517CBC /* CardDeck.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EF8DDC7236BA89000517CBC /* CardDeck.hpp */; };
 		3EF8DDCB236BA9E300517CBC /* CardDeckImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EF8DDC9236BA9E300517CBC /* CardDeckImpl.cpp */; };
 		3EF8DDCE236D74C300517CBC /* TarotDeck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EF8DDCC236D74C300517CBC /* TarotDeck.cpp */; };
+		7C9DF9C82AC69A6F00FC1EF7 /* FrenchCardDeck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DF9C62AC69A6F00FC1EF7 /* FrenchCardDeck.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +43,8 @@
 		3EF8DDCA236BA9E300517CBC /* CardDeckImpl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CardDeckImpl.hpp; sourceTree = "<group>"; };
 		3EF8DDCC236D74C300517CBC /* TarotDeck.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TarotDeck.cpp; sourceTree = "<group>"; };
 		3EF8DDCD236D74C300517CBC /* TarotDeck.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TarotDeck.hpp; sourceTree = "<group>"; };
+		7C9DF9C62AC69A6F00FC1EF7 /* FrenchCardDeck.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FrenchCardDeck.cpp; sourceTree = "<group>"; };
+		7C9DF9C72AC69A6F00FC1EF7 /* FrenchCardDeck.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FrenchCardDeck.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 				3EF8DDCD236D74C300517CBC /* TarotDeck.hpp */,
 				3EF8DDC6236B896600517CBC /* TarotMajorArcanaCard.hpp */,
 				3EE79CC7236A6A68006F8E6A /* TarotMinorArcanaCard.hpp */,
+				7C9DF9C62AC69A6F00FC1EF7 /* FrenchCardDeck.cpp */,
+				7C9DF9C72AC69A6F00FC1EF7 /* FrenchCardDeck.hpp */,
 			);
 			path = blackjack_20180527_1941;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 				3EF8DDCB236BA9E300517CBC /* CardDeckImpl.cpp in Sources */,
 				3EF8DDC8236BA89000517CBC /* CardDeck.hpp in Sources */,
 				3E4B781020BBA42E003106D5 /* main.cpp in Sources */,
+				7C9DF9C82AC69A6F00FC1EF7 /* FrenchCardDeck.cpp in Sources */,
 				3E4B781B20BBB6F8003106D5 /* FrenchCard.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,6 +13,7 @@
 
 #include "Card.hpp"
 #include "TarotDeck.hpp"
+#include "FrenchCardDeck.hpp"
 
 using namespace std;
 
@@ -90,9 +91,17 @@ public:
 int main(int argc, const char * argv[]) {
         
     TarotDeck* tarotDeck = new TarotDeck();
+    FrenchCardDeck* aFrenchCardDeck = new FrenchCardDeck();
     
-    GameDeck* gameDeck = new GameDeck(tarotDeck, 2);
-    gameDeck->print();
+    GameDeck* aTarotGameDeck = new GameDeck(tarotDeck, 2);
+    GameDeck* aFrenchGameDeck = new GameDeck(aFrenchCardDeck, 1);
+    
+    cout << "Tarot Deck" << endl;
+    aTarotGameDeck->print();
+    
+    cout << endl;
+    cout << "French Card Deck" << endl;
+    aFrenchGameDeck->print();
     
     return 0;
 }

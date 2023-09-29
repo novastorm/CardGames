@@ -1,4 +1,4 @@
-//
+ //
 //  TarotMinorCard.hpp
 //  blackjack_20180527_1941
 //
