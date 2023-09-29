@@ -15,7 +15,6 @@
 		7C9DF9CA2AC6A3C800FC1EF7 /* CardImpl.tpp in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DF9C92AC6A3C800FC1EF7 /* CardImpl.tpp */; };
 		7C9DF9CE2AC6CA5500FC1EF7 /* TarotMajorArcanaCard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DF9CD2AC6CA5500FC1EF7 /* TarotMajorArcanaCard.cpp */; };
 		7C9DF9D02AC6CB5F00FC1EF7 /* TarotMinorArcanaCard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DF9CF2AC6CB5F00FC1EF7 /* TarotMinorArcanaCard.cpp */; };
-		7C9DF9D12AC6D14000FC1EF7 /* CardDeckMixin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EF8DDC9236BA9E300517CBC /* CardDeckMixin.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -169,7 +168,6 @@
 				3EF8DDCE236D74C300517CBC /* TarotDeck.cpp in Sources */,
 				3EF8DDC8236BA89000517CBC /* CardDeck.hpp in Sources */,
 				7C9DF9D02AC6CB5F00FC1EF7 /* TarotMinorArcanaCard.cpp in Sources */,
-				7C9DF9D12AC6D14000FC1EF7 /* CardDeckMixin.cpp in Sources */,
 				3E4B781020BBA42E003106D5 /* main.cpp in Sources */,
 				7C9DF9CE2AC6CA5500FC1EF7 /* TarotMajorArcanaCard.cpp in Sources */,
 				7C9DF9CA2AC6A3C800FC1EF7 /* CardImpl.tpp in Sources */,

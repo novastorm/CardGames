@@ -9,21 +9,17 @@
 #ifndef CardDeckMixin_hpp
 #define CardDeckMixin_hpp
 
-#include <stdio.h>
-
-#include "CardDeck.hpp"
-
-class CardDeckMixin: public virtual CardDeck {
-
-protected:
-    std::vector<Card*> deck;
-    const int _count;
+class CardDeckMixin {
     
 public:
-    CardDeckMixin();
+    int count(){
+        return _count;
+    }
     
-    int count();
-    Card* operator[] (int index);
+    Card* operator[] (int index) {
+        Card* aCard = deck[index];
+        return aCard;
+    }
 };
 
 //#include "CardDeckMixin.tpp"
